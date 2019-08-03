@@ -1,0 +1,53 @@
+{
+  "name": "mozaik-ext-githubcontributions",
+  "version": "0.1.0",
+  "description": "Mozaik Widgets to show GitHub contributions",
+  "main": "./lib/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/karuppiah7890/mozaik-ext-githubcontributions.git"
+  },
+  "author": "Karuppiah Natarajan <karuppiah7890@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/karuppiah7890/mozaik-ext-githubcontributions/issues"
+  },
+  "homepage": "https://github.com/karuppiah7890/mozaik-ext-githubcontributions#readme",
+  "dependencies": {
+    "@mozaik/ui": "^2.0.0-rc.2",
+    "@octokit/graphql": "^3.0.1",
+    "convict": "^5.1.0",
+    "dotenv": "^8.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "shasum": "^1.0.2",
+    "styled-components": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "cross-env": "^5.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:commonjs:watch": "npm run build:commonjs -- --watch",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:es:watch": "npm run build:es -- --watch",
+    "build": "npm run build:commonjs && npm run build:es",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "github",
+    "mozaik",
+    "widget",
+    "extension",
+    "dashboard"
+  ]
+}
