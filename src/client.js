@@ -10,9 +10,10 @@ const graphql = require('@octokit/graphql');
 const client = mozaik => {
   mozaik.loadApiConfig(config);
 
-  const buildGraphQLApiRequest = (query, variables, debug) => {
+  const buildGraphQLApiRequest = (query, variables) => {
     const baseUrl = config.get('github.baseUrl');
     const token = config.get('github.token');
+    const debug = config.get('github.debug');
 
     const queryWithHeaders = {
       query,
