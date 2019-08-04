@@ -1,7 +1,7 @@
 const convict = require('convict');
 
 const config = convict({
-  github: {
+  githubcontributions: {
     baseUrl: {
       doc: 'The GitHub GraphQL API v4 endpoint',
       default: 'https://api.github.com',

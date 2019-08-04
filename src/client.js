@@ -11,9 +11,9 @@ const client = mozaik => {
   mozaik.loadApiConfig(config);
 
   const buildGraphQLApiRequest = (query, variables) => {
-    const baseUrl = config.get('github.baseUrl');
-    const token = config.get('github.token');
-    const debug = config.get('github.debug');
+    const baseUrl = config.get('githubcontributions.baseUrl');
+    const token = config.get('githubcontributions.token');
+    const debug = config.get('githubcontributions.debug');
 
     const queryWithHeaders = {
       query,
